@@ -22,11 +22,14 @@ export function ProductDialog({
 }: ProductDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-900">
         <DialogHeader>
-          <DialogTitle>
+          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {product ? "Edit Product" : "Add New Product"}
           </DialogTitle>
+          <p className="text-muted-foreground">
+            {product ? "Update product information" : "Fill in the details to add a new product"}
+          </p>
         </DialogHeader>
         <ProductForm
           product={product}

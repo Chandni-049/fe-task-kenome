@@ -1,5 +1,6 @@
 import QueryProvider from "@/lib/query-provider";
 import "@/styles/globals.css";
+import Navbar from "@/components/navbar";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,7 +34,8 @@ export default function RootLayout({
         >
           <QueryProvider>
             <ToastContainer />
-            <div className="h-screen max-h-screen overflow-hidden">
+            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800">
+              <Navbar />
               {children}
             </div>
           </QueryProvider>

@@ -1,5 +1,4 @@
 "use client"
-import Navbar from "@/components/navbar";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -13,11 +12,13 @@ export default function HomePage() {
   }, [router]);
 
   return (
-    <main className="min-h-screen overflow-auto">
-      <Navbar />
-      <div className="container mx-auto py-8">
+    <main className="min-h-screen">
+      <div className="container mx-auto py-16">
         <div className="flex items-center justify-center h-64">
-          <div className="text-lg">Redirecting to products...</div>
+          <div className="text-center space-y-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <div className="text-lg font-medium text-muted-foreground">Redirecting to products...</div>
+          </div>
         </div>
       </div>
     </main>
